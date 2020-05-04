@@ -1,10 +1,6 @@
-{% include "/header.html.twig" %}
+{% include "header.html.twig" %}
 {% block body %}
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                {% block fos_user_content %}{% endblock %}
-            </div>
-        </div>
+        {% block fos_user_content %}{% endblock %}
     </div>
 {% endblock %}

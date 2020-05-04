@@ -1,0 +1,13 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('css/profile') }}
+    {% endblock %}
+
+    {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+        {{ form_widget(form) }}
+        <div>
+            <a href="{{ path('fos_user_profile_show') }}" class="btn btn-primary active" role="button" aria-pressed="true">Annuler</a>
+            <input class="btn btn-primary active" type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+        </div>
+    {{ form_end(form) }}

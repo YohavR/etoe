@@ -1,23 +1,56 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Bienvenue sur ETOE</title>
-        <meta charset="utf-8">
-        {% block stylesheets %}
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        {% endblock %}
-    </head>
+<html lang="fr">
+    {% include 'header.html.twig' %}
     <body>
+    <div id="demo" class="carousel slide" data-ride="carousel">
 
-    {% include "header.html.twig" %}
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
 
-        <h1>Hello World!</h1>
-        <h2>Bienvenue sur ETOE!</h2>
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-caption">
+                    <h3 class="carousel">E²</h3>
+                    <p class="carousel">ENSEIGNER, AIDER, La RICHESSE EST A L'ECHANGE </p>
+                </div>
+                <img src="{{asset('build/images/computer.jpg')}}" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('build/images/boys.jpg')}}" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('build/images/online.jpg')}}" width="1100" height="500">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h1>ETOE</h1>
+                <p id="presentation">
+                    Étudiants passionnés par le partage de leur compétences, entrepreneurs dans l’âme et très sensibles à l’accompagnement des élèves nous avons décidé de nous lancer dans l’aventure de l’entreprise au travers de ce que nous connaissons le mieux :
+                    “l’accompagnement personnalisé des élèves avec le respect de chacun “
+                    Chacun de nous, durant notre carrière, a pu croiser des élèves précoces, des élèves dyslexiques, des élèves moyens, des élèves autistes et des parents soucieux de trouver la personne qui correspond aux attentes de leurs enfants.
+                    Nous avons travaillé sur les intelligences multiples, sur l’estime de soi, sur les parcours pédagogiques différenciés. Puisque nous sommes avant tout des étudiants qui sommes passés par l’aide aux devoir en parallèle de nos études. Nous sommes une équipe sensible aux pédagogies. Le cours particulier est un ardu mélange entre l’élève apprenant et l’étudiant lui apportant les réponses adéquates.
+                    Nous sommes notamment sensibles à la valorisation positive de l’élève, à la confiance développée dans le rapport étudiant-élève. Nous proposons un réseau d’étudiants différents autant sur le plan pédagogique que relationnel.
+                </p>
+            </div>
+        </div>
+    </div>
+
     </body>
-
-    {% block scripts %}
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    {% endblock %}
 </html>
